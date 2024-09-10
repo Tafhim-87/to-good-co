@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection{
+    background-color: #111;
+    color: #fff;
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    background-color: rgb(240, 248, 255);
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    padding: 1.3vw;
+    display : flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#nav-part1{
+    height: 82px;
+    overflow: hidden;
+}
+
+#nav-part1 svg{
+    display: block;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #111;
+    font-size: 1vw;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-right: 50px;
+}
+#nav-part2 i{
+    font-size: 1rem;
+}
+
+#nav-part2 #icons{
+    background-color: rgb(240, 248, 255);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+#cursor {
+    height: 180px;
+    width: 180px;
+    background-color: rgba(224, 139, 189, 0.814);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+/* The CSS code for `#page1` and `#video-container` is styling the first section of a webpage. Here's a
+breakdown of what each part of the code is doing: */
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    padding: 30vh 0 0vw 2vw;
+    position: relative;
+}
+
+#page1 h1{
+    font-size: 15.5vw;
+    font-family: futura;
+    line-height: 14vw;
+    font-weight: 800;
+    letter-spacing: -.5vw;
+}
+
+#video-container{
+    height: 100vh;
+    width: 98%;
+    margin-top: 1vw;
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#video-container #play{
+    padding: 3vw 2vw;
+    background-color: black;
+    color: #fff;
+    font-size: 1.5vw;
+    font-family: futura;
+    position: fixed;
+    border-radius: 50%;
+    scale: 0;
+    opacity: 0;
+}
+
+/* The CSS code you provided is styling the `#top` section of a webpage. Here's what each part of the
+code is doing: */
+#top{
+    width: 100%;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 3vw;
+}
+
+#top .line{
+    width: 100%;
+    height: .1vw;
+    background-color: #111;
+}
+
+#top .line1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#top .line1 h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+
+/* The CSS code for `#page2` is styling a section of a webpage. Here's a breakdown of what each part of
+the code is doing: */
+#page2{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 1vw;
+}
+
+#page2 .elem{
+    height: 100%;
+    width: 30%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+#page2 .elem .dets{
+    height: 60px;
+    width: 70%;
+    background-color: rgb(226, 226, 226);
+    z-index: 9;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    padding: 0 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.dets .circle{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #111;
+}
+
+#page3{
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#page3 .child{
+    width: 35vw;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#page3 .child h4{
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#page3 .child img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 5vw;
+}
+
+#page4{
+    width: 100%;
+    height: 100vh;
+    margin-top: 5vw;
+    background-color: #111;
+}
+
+@media (max-width: 600px) {
+    /* The CSS code you provided is styling the navigation bar of a webpage. Here's a breakdown of what
+    each part of the code is doing: */
+    nav{
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+        padding: 1.3vw;
+        display : flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    #nav-part1{
+        height: 62px;
+        overflow: hidden;
+    }
+    
+    #nav-part1 svg{
+        display: block;
+        height: 63px;
+        width: 70px;
+    }
+    #nav-part2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    nav a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #111;
+        font-size: 1vw;
+        font-family: sans-serif;
+        font-weight: 500;
+        margin-right: 50px;
+        display: none;
+    }
+    #nav-part2 i{
+        font-size: 1rem;
+    }
+    
+    #nav-part2 #icons{
+        background-color: rgb(240, 248, 255);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+        padding: 5px 10px;
+        margin-right: 10px;
+    }
+
+    #page1{
+        padding: 30vh 0 3vw 3vw;
+        min-height: 70vh;
+    }
+    #page1 h1{
+        font-size: 15.5vw;
+        line-height: 14vw;
+        letter-spacing: -.3vw;
+    }
+    #video-container{
+        height: 25vh;
+        width: 98%;
+        margin-top: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #video-container #play{
+        padding: 3vw 2vw;
+        background-color: black;
+        color: #fff;
+        font-size: 1.5vw;
+        font-family: futura;
+        position: fixed;
+        border-radius: 50%;
+        scale: 3.5;
+        opacity: 1;
+    }
+
+    #page2{
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3vw 3vw;
+        flex-direction: column;
+    }
+    #page2 .elem{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        margin-top: 5vw;
+    }
+    #page2 .elem .dets{
+        height: 40px;
+        font-size: 1rem;
+        padding: 0 1vw;
+    }
+
+    #page3{
+        width: 100%;
+        min-height: 120vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    
+    #page3 .child{
+        width: 90vw;
+        height: 45vh;
+        padding: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #page3 .child img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 5vw;
+    }
+    
+}
