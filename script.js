@@ -54,8 +54,71 @@ function navBarAnimation() {
     }
   })
 }
-
 navBarAnimation()
+
+function menuAnimation() {
+  function openMenu() {
+    var menuBar = document.getElementById("menu");
+
+menuBar.addEventListener("click", function () {
+  var tl = gsap.timeline();
+  tl.to("#hedenNav", {
+    display: "flex",
+    height: "100vh",
+    ease: "power4.out",
+  })
+
+  tl.to("#hedenNav li a", {
+    opacity: 1,
+    stagger: 0.1,
+    duration: .3,
+  })
+
+  document.querySelector('#close').style.display = 'flex'
+  document.querySelector('#menu').style.display = 'none'
+  document.querySelector('#nav-part1 svg').style.color = '#fff'
+  document.querySelector('#twogoodlogo').style.color = '#fff'
+})
+  }
+  openMenu()
+
+  function closeMenu() {
+    var closeBar = document.getElementById("close");
+
+closeBar.addEventListener("click", function () {
+  var tl = gsap.timeline();
+  tl.to("#hedenNav li a", {
+    opacity: 0,
+    stagger: 0.1,
+    duration: .3,
+  })
+  tl.to('#nav-part1 svg, #twogoodlogo', {
+    color: '#111',
+    duration: .3,
+  })
+
+  tl.to("#hedenNav", {
+    display: "none",
+    height: 0,
+    duration: .3,
+  })
+  tl.to('#close', {
+    display: 'none',
+  })
+  tl.to('#menu', {
+    display: 'flex',
+  })
+  
+
+  // document.querySelector('#nav-part1 svg').style.color = '#111'
+  // document.querySelector('#twogoodlogo').style.color = '#111'
+})
+}
+
+  closeMenu()
+}
+
+menuAnimation()
 
 function cursor() {
     var videoCon = document.getElementById("video-container");
@@ -87,7 +150,6 @@ videoCon.addEventListener("mousemove", function (dets) {
     })
 })
 }
-
 cursor()
 
 function loddingAnimation() {
@@ -106,7 +168,6 @@ function loddingAnimation() {
         delay: 1.5
     })
 }
-
 loddingAnimation()
 
 
@@ -132,4 +193,4 @@ function cursorAnimation() {
       });
     });
   }
-  cursorAnimation();
+cursorAnimation();
